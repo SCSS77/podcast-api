@@ -3,11 +3,11 @@ import { PodcastProps } from '@/podcasts'
 import { useEffect, useState, useCallback } from 'react'
 
 import { setLocalStorageWithExpiry, getLocalStorageWithExpiry } from '@/utils/localStorage'
-import useLoadingBounce from './useLoadingBounce'
+import useLoading from './useLoading'
 
 export default function usePodcast () {
   const [podcastEntries, setPodcastEntries] = useState<PodcastProps[] | null>(null)
-  const { setLoading } = useLoadingBounce()
+  const { setLoading } = useLoading()
 
   const fetchData = useCallback(async () => {
     try {
