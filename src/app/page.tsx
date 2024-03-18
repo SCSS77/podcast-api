@@ -28,12 +28,14 @@ function HomeContent () {
         </span>
         <input type='text' onChange={handleOnchange} placeholder='Filter podcast...' />
       </div>
-      <section className='podcasts'>
-        {filterPodcastSearch?.map(content => (
-          <div key={content.id} className='podcasts-container'>
-            <PodcastList items={content} />
-          </div>
-        ))}
+      <section className='podcasts-content'>
+        <ul className='podcasts-content__list'>
+          {filterPodcastSearch?.map(content => (
+            <li key={content.id} className='podcasts-content__item'>
+              <PodcastList items={content} />
+            </li>
+          ))}
+        </ul>
       </section>
     </>
   )
