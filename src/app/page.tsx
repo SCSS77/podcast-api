@@ -22,8 +22,8 @@ function HomeContent () {
 
   return (
     <>
-      <div className='podcastst-searcher'>
-        <span className='podcastst-searcher__text'>
+      <div className='podcasts-searcher'>
+        <span className='podcasts-searcher__text'>
           {filterPodcastSearch?.length}
         </span>
         <input type='text' onChange={handleOnchange} placeholder='Filter podcast...' />
