@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Podcasts exercice
 
-## Getting Started
+<dl>
+  <dt>Podcasts Listpage</dt>
+  - Show the list of the 100 most popular podcasts according to Apple's list.
+  - Once the list has been obtained from the external service for the first time, it must be stored in the client so that it can only be requested again if more than one day has passed since the last time it was requested.
+  - The user will be able to filter the podcasts displayed by entering a text string that will take into account both the title of the podcasts and the names of their authors.
+  - Filtering should be immediate so that it reacts as the user enters his or her filter text.
+  - By clicking on a podcast, the user will navigate to a detailed view of the podcast.
 
-First, run the development server:
+  <dt>Podcasts page</dt>
+  - A sidebar with the image of the podcast, its title, author and description should be displayed.
+  - A main section should be displayed showing the number of episodes that the podcast currently has as well as a list of them indicating their title, publication date and duration.
+  - Once the detail of a podcast has been obtained from the external service for the first time, it should be stored in the client so that it is only requested again if one day has passed since the last time it was requested.
+  - Clicking on the title of an episode will navigate to the episode detail view.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+  <dt>Episode page</dt>
+  - The same sidebar must be displayed as in the previous view. Both the image and the podcast title and author must be links to the podcast detail view (these components are also allowed to have the same links in the previous view).
+  - A main section should be displayed where the title of the podcast, its description and a basic audio player (native HTML5) to play the podcast will be displayed.
+  - It should be noted that some episode descriptions contain HTML and this should be rendered (not escaped).
+</dl>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Quick start
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1.  Make sure that you have Node.js v8.15.1 and npm v5 or above installed.
+2.  Clone this repo using `git clone --depth=1 https://github.com/SCSS77/podcast-api.git <YOUR_PROJECT_NAME>`
+3.  Move to the appropriate directory: `cd <YOUR_PROJECT_NAME>`.<br />
+4.  Run `npm run setup` in order to install dependencies and clean the git repo.<br />
+    _At this point you can run `npm start` to see the example app at `http://localhost:3000`._
+5.  Run `npm run clean` to delete the example app.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Now you're ready to rumble!
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+> Please note that this boilerplate is **production-ready and not meant for beginners**! If you're just starting out with react or redux, please refer to https://github.com/petehunt/react-howto instead. If you want a solid, battle-tested base to build your next product upon and have some experience with react, this is the perfect start for you.
