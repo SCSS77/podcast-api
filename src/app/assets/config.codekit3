@@ -24,6 +24,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/podcast.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 1,
+      "oA" : 0,
+      "oAP" : "\/Users\/sandra\/podcast-api\/src\/app\/podcast.css",
+      "oF" : 6,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/widget\/loading.scss" : {
       "aP" : 0,
       "bl" : 0,
