@@ -8,7 +8,7 @@
   - Filtering should be immediate so that it reacts as the user enters his or her filter text.
   - By clicking on a podcast, the user will navigate to a detailed view of the podcast.
 
-  <dt>Podcasts page</dt>
+  <dt>Podcast detail page</dt>
   - A sidebar with the image of the podcast, its title, author and description should be displayed.
   - A main section should be displayed showing the number of episodes that the podcast currently has as well as a list of them indicating their title, publication date and duration.
   - Once the detail of a podcast has been obtained from the external service for the first time, it should be stored in the client so that it is only requested again if one day has passed since the last time it was requested.
