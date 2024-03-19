@@ -32,6 +32,7 @@ export default function PodcastDescriptionPage ({ params: { podcastId } }: Param
       <div className='podcast-detail-content__title'>
         Episodes: <span>{featurePodcastSummary[0]?.episodes || 0}</span>
       </div>
+      <hr className='podcast-detail-content__separator' />
       <div className='podcast-detail-content__list'>
         <div className='podcast-detail-content__list-container'>
           <div className='podcast-detail-content__list-subtitles'>
