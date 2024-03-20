@@ -1,5 +1,6 @@
 @import 'list.css';
 @import 'podcast.css';
+@import 'episode.css';
 
 @tailwind base;
 @tailwind components;

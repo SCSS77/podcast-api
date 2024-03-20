@@ -9,6 +9,21 @@
   ],
   "creatorBuild" : "34434",
   "files" : {
+    "\/scss\/episode.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 1,
+      "oA" : 0,
+      "oAP" : "\/Users\/sandra\/podcast-api\/src\/app\/episode.css",
+      "oF" : 6,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/list.scss" : {
       "aP" : 0,
       "bl" : 0,

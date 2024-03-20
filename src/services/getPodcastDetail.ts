@@ -28,14 +28,14 @@ export default async function getPodcastDetail (podcastId: string): Promise<Podc
       } else {
         return {
           type: wrapperType,
-          description: description,
+          description,
           image: artworkUrl600,
           id: episodeGuid,
           release: releaseDate,
           title: trackName,
           duration: trackTimeMillis,
           mediaType: episodeContentType,
-          episodeUrl: episodeUrl
+          episodeUrl
         }
       }
     })
