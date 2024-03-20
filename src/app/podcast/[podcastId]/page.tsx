@@ -4,6 +4,7 @@ import usePodcastDetail from '@/hooks/usePodcastDetail'
 import { getDateFormatter } from '@/utils/dateFormat'
 import { getDurationFormat } from '@/utils/durationFormat'
 import Link from 'next/link'
+// import useLoading from '@/hooks/useLoading'
 
 type Params = {
   params: {
@@ -13,6 +14,7 @@ type Params = {
 
 export default function PodcastDescriptionPage ({ params: { podcastId } }: Params) {
   const { podcastDetail } = usePodcastDetail(podcastId)
+  // const { loading } = useLoading()
 
   if (!podcastDetail) return null
 
@@ -27,6 +29,7 @@ export default function PodcastDescriptionPage ({ params: { podcastId } }: Param
     return isValidURL(detailId) ? detailId : `/podcast/${podcastId}/episode/${detailId}`
   }
 
+  // if (loading) return null
   return (
     <div className='podcast-detail-content'>
       <div className='podcast-detail-content__title'>
