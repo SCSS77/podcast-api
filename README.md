@@ -17,8 +17,6 @@
   </a>
 </p>
 
-<br />
-
 ## Podcasts exercice
 
 <dl>
