@@ -1,3 +1,24 @@
+<img src="https://raw.githubusercontent.com/SCSS77/podcast-api/8e74a12bd0124d65beaa3f54982e23ded9eaf32b/public/banner-next-react.jpeg" alt="react boilerplate banner" align="center" />
+
+<br />
+
+<p align="center" dir="auto">
+  <a aria-label="Vercel logo" href="https://vercel.com" rel="nofollow">
+    <img src="https://camo.githubusercontent.com/1210c36bead6cfcb15611855f43b91e6d1a786a7494277c443be911e5e48b84e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d414445253230425925323056657263656c2d3030303030302e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d56657263656c266c6162656c436f6c6f723d303030" data-canonical-src="https://img.shields.io/badge/MADE%20BY%20Vercel-000000.svg?style=for-the-badge&amp;logo=Vercel&amp;labelColor=000" style="max-width: 100%;">
+  </a>
+  <a aria-label="NPM version" href="https://www.npmjs.com/package/next" rel="nofollow">
+    <img alt="" src="https://camo.githubusercontent.com/c2d412c35131fe13ccdee4ddf7879f5cffe90509f2bf0540b5428d76ded71476/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f6e6578742e7376673f7374796c653d666f722d7468652d6261646765266c6162656c436f6c6f723d303030303030" data-canonical-src="https://img.shields.io/npm/v/next.svg?style=for-the-badge&amp;labelColor=000000" style="max-width: 100%;">
+  </a>
+  <a aria-label="License" href="https://github.com/vercel/next.js/blob/canary/license.md">
+    <img alt="" src="https://camo.githubusercontent.com/9be3d0216cf01c592bce7bb948ec30b12d50e505f2ba05a6704f69d3b4ab5bcf/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f6c2f6e6578742e7376673f7374796c653d666f722d7468652d6261646765266c6162656c436f6c6f723d303030303030" data-canonical-src="https://img.shields.io/npm/l/next.svg?style=for-the-badge&amp;labelColor=000000" style="max-width: 100%;">
+  </a>
+  <a aria-label="Join the community on GitHub" href="https://github.com/vercel/next.js/discussions">
+    <img alt="" src="https://camo.githubusercontent.com/5c10e4f17a3f0976591009bd10aa09fd8ce885c54e4c6527ce1107006be252d6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4a6f696e253230746865253230636f6d6d756e6974792d626c756576696f6c65742e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d4e6578742e6a73266c6162656c436f6c6f723d303030303030266c6f676f57696474683d3230" data-canonical-src="https://img.shields.io/badge/Join%20the%20community-blueviolet.svg?style=for-the-badge&amp;logo=Next.js&amp;labelColor=000000&amp;logoWidth=20" style="max-width: 100%;">
+  </a>
+</p>
+
+<br />
+
 ## Podcasts exercice
 
 <dl>
