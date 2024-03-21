@@ -27,7 +27,8 @@
 3.  Move to the appropriate directory: `cd <YOUR_PROJECT_NAME>`.<br />
 4. This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 5.  Run `npm install` in order to install dependencies and clean the git repo.<br />
-    _At this point you can run `npm run dev` (`yarn dev` or `pnpm dev`) to see the example app at `http://localhost:3000`._
+    _At this point you can run `npm run dev` (`yarn run dev`) to see the example app at `http://localhost:3000`._
+6. To use the tests you can enter this script in the terminal `npm run test` (`yarn test`).
 
 Now you're ready to rumble!
 
