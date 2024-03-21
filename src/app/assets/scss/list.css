@@ -93,7 +93,7 @@
 .podcasts-content__item {
   font-size: 13px;
   font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-  flex: calc(100% - 80px);
+  width: calc(100% - 80px);
   margin: auto;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -125,17 +125,18 @@
 /* Responsive Styles */
 @media (min-width: 768px) {
   .podcasts-content__list {
-    margin: 0 -10px;
+    margin: 0 -8px;
   }
   .podcasts-content__item {
-    flex: 0 calc(16.66% - 20px);
-    margin: 0 10px 20px;
+    margin: 10px;
+    width: 165px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
+  .podcasts-content__list {
+    margin: auto;
+  }
   .podcasts-content__item {
-    flex: calc(33.33% - 20px);
+    width: calc(33.33% - 20px);
   }
 }
-
-/*# sourceMappingURL=list.css.map */

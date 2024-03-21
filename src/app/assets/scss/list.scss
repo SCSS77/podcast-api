@@ -50,7 +50,7 @@
     &__item {
         font-size: 13px;
         font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-        width: calc(100% - 80px);
+        flex: calc(100% - 80px);
         margin: auto;
         border: 1px solid #ccc;
         border-radius: 8px;
@@ -90,22 +90,18 @@
 @media (min-width: $breakpoint-md) {
 
     .podcasts-content__list {
-        margin: 0 -8px;
+        margin: 0 -10px;
     }
 
     .podcasts-content__item {
-        margin: 10px;
-        width: 165px;
+        flex: 0 calc(16.66% - 20px);
+        margin: 0 10px 20px;
     }
 }
 
 @media (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
 
-    .podcasts-content__list {
-        margin: auto;
-    }
-
     .podcasts-content__item {
-        width: calc(33.33% - 20px);
+        flex: calc(33.33% - 20px);
     }
 }
