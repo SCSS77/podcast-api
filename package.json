@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "vitest"
   },
   "dependencies": {
     "@pnpm/lockfile-file": "^8.1.8",
@@ -15,7 +16,8 @@
     "pnpm": "^8.5.1",
     "react": "^18",
     "react-dom": "^18",
-    "standard": "^17.1.0"
+    "standard": "^17.1.0",
+    "vitest": "^1.4.0"
   },
   "devDependencies": {
     "@types/node": "^20",
