@@ -1,0 +1,49 @@
+@import 'list.css';
+@import 'podcast.css';
+@import 'episode.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+}
+
+.header {
+  border-bottom: 1px solid #CCC;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+  padding: 2rem 2rem .75rem;
+}
+
+.header-title a {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.016em;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

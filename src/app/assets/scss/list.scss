@@ -1,0 +1,111 @@
+@import 'widget/loading';
+@import 'util/variables';
+
+.podcasts-searcher {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 1.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    padding: 0 2rem;
+
+    &__text {
+        background: #333;
+        border-radius: .25rem;
+        color: #FFF;
+        font-size: 80%;
+        line-height: 1.25rem;
+        margin-right: .5rem;
+        text-align: center;
+        width: 2rem;
+    }
+
+    input {
+        border: 1px solid #CCC;
+        border-radius: .375rem;
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+        font-size: 80%;
+        line-height: 1.25rem;
+        padding: .5rem .75rem;
+    }
+}
+
+.podcasts-content {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    padding: 0 2rem;
+
+    &__list {
+        align-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    &__item {
+        font-size: 13px;
+        font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+        width: calc(100% - 80px);
+        margin: auto;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #FFF;
+
+        &:hover {
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);
+            transform: translateY(-0.5rem);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+
+    &__info {
+        padding: 10px;
+    }
+
+    &__title {
+        letter-spacing: -.016em;
+        margin-top: 0;
+        font-weight: 600;
+    }
+
+    &__author {
+        color: #666;
+        margin-bottom: 0;
+    }
+}
+
+/* Responsive Styles */
+
+@media (min-width: $breakpoint-md) {
+
+    .podcasts-content__list {
+        margin: 0 -8px;
+    }
+
+    .podcasts-content__item {
+        margin: 10px;
+        width: 165px;
+    }
+}
+
+@media (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
+
+    .podcasts-content__list {
+        margin: auto;
+    }
+
+    .podcasts-content__item {
+        width: calc(33.33% - 20px);
+    }
+}

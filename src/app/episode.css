@@ -1,0 +1,17 @@
+/* Breakpoints */
+/* Breakpoints max */
+/* Breakpoints min */
+.podcast-detail-content-episode {
+  color: #333;
+  font-size: 80%;
+  font-style: italic;
+}
+.podcast-detail-content-episode .podcast-detail-content__title {
+  margin-bottom: 0.5rem;
+}
+.podcast-detail-content-episode__audio {
+  margin-top: 1.75rem;
+  width: 100%;
+}
+
+/*# sourceMappingURL=episode.css.map */
