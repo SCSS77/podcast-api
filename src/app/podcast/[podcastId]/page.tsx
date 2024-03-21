@@ -31,35 +31,37 @@ export default function PodcastDescriptionPage ({ params: { podcastId } }: Param
 
   // if (loading) return null
   return (
-    <div className='podcast-detail-content'>
-      <div className='podcast-detail-content__title'>
-        Episodes: <span>{featurePodcastSummary[0]?.episodes || 0}</span>
-      </div>
-      <hr className='podcast-detail-content__separator' />
-      <div className='podcast-detail-content__list'>
-        <div className='podcast-detail-content__list-container'>
-          <div className='podcast-detail-content__list-subtitles'>
-            <div>Title</div>
-            <div>Date</div>
-            <div>Duration</div>
+    <div className='podcasts-main'>
+      <div className='podcast-detail-content'>
+        <div className='podcast-detail-content__title'>
+          Episodes: <span>{featurePodcastSummary[0]?.episodes || 0}</span>
+        </div>
+        <hr className='podcast-detail-content__separator' />
+        <div className='podcast-detail-content__list'>
+          <div className='podcast-detail-content__list-container'>
+            <div className='podcast-detail-content__list-subtitles'>
+              <div>Title</div>
+              <div>Date</div>
+              <div>Duration</div>
+            </div>
+            <ul className='podcast-detail-content__list-details'>
+              {podcastDetail.filter(item => item.type !== 'track').map((detail, index) => (
+                <li key={index} className={`${index % 2 === 0 ? 'podcast-detail-content__list-details-item even' : 'podcast-detail-content__list-details-item odd'}`}>
+                  <div className='podcast-detail-content__list-details-title'>
+                    <Link href={customLink(detail.id)}>
+                      {detail.title}
+                    </Link>
+                  </div>
+                  <div className='podcast-detail-content__list-details-release'>
+                    {getDateFormatter(detail.release)}
+                  </div>
+                  <div className='podcast-detail-content__list-details-duration'>
+                    {getDurationFormat(detail.duration)}
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul className='podcast-detail-content__list-details'>
-            {podcastDetail.filter(item => item.type !== 'track').map((detail, index) => (
-              <li key={index} className={`${index % 2 === 0 ? 'podcast-detail-content__list-details-item even' : 'podcast-detail-content__list-details-item odd'}`}>
-                <div className='podcast-detail-content__list-details-title'>
-                  <Link href={customLink(detail.id)}>
-                    {detail.title}
-                  </Link>
-                </div>
-                <div className='podcast-detail-content__list-details-release'>
-                  {getDateFormatter(detail.release)}
-                </div>
-                <div className='podcast-detail-content__list-details-duration'>
-                  {getDurationFormat(detail.duration)}
-                </div>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </div>

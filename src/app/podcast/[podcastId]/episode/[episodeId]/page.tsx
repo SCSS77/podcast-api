@@ -26,14 +26,16 @@ export default async function episodeIdPage ({ params: { podcastId, episodeId } 
       : <p className=''>{description}</p>
 
     return (
-      <div className='podcast-detail-content'>
-        <article className='podcast-detail-content-episode'>
-          <h2 className='podcast-detail-content__title'>{title}</h2>
-          {descriptionContent}
-          {mediaType === 'audio' && (
-            <audio src={episodeUrl} controls className='podcast-detail-content-episode__audio' />
-          )}
-        </article>
+      <div className='podcasts-main'>
+        <div className='podcast-detail-content'>
+          <article className='podcast-detail-content-episode'>
+            <h2 className='podcast-detail-content__title'>{title}</h2>
+            {descriptionContent}
+            {mediaType === 'audio' && (
+              <audio src={episodeUrl} controls className='podcast-detail-content-episode__audio' />
+            )}
+          </article>
+        </div>
       </div>
     )
   } catch (error) {

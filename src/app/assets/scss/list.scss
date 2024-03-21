@@ -1,4 +1,5 @@
 @import 'widget/loading';
+@import 'util/variables';
 
 .podcasts-searcher {
     align-items: center;
@@ -9,6 +10,7 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 1280px;
+    padding: 0 2rem;
 
     &__text {
         background: #333;
@@ -36,20 +38,20 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 1280px;
+    padding: 0 2rem;
 
     &__list {
         align-content: center;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        margin: 0 -8px;
     }
 
     &__item {
         font-size: 13px;
         font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-        width: 165px;
-        margin: 10px;
+        width: calc(100% - 80px);
+        margin: auto;
         border: 1px solid #ccc;
         border-radius: 8px;
         overflow: hidden;
@@ -85,16 +87,25 @@
 
 /* Responsive Styles */
 
-@media (max-width: 768px) {
+@media (min-width: $breakpoint-md) {
+
+    .podcasts-content__list {
+        margin: 0 -8px;
+    }
 
     .podcasts-content__item {
-        width: calc(50% - 40px);
+        margin: 10px;
+        width: 165px;
     }
 }
 
-@media (max-width: 576px) {
+@media (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
+
+    .podcasts-content__list {
+        margin: auto;
+    }
 
     .podcasts-content__item {
-        width: calc(100% - 40px);
+        width: calc(33.33% - 20px);
     }
 }

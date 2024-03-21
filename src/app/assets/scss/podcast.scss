@@ -1,11 +1,15 @@
+@import 'util/variables';
+
 .podcast-detail {
 
   &-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin: auto auto 2.5rem;
     max-width: 1280px;
+    padding: 0 2rem;
+
+    .podcasts-main {
+      flex: 0 0 75%;
+    }
   }
 
   &-aside {
@@ -65,7 +69,8 @@
   &-content {
     background: #FFF;
     border: 1px solid #CCC;
-    flex: 0 0 75%;
+    border-radius: 8px;
+    margin-top: 1.25rem;
     padding: 1.25rem;
 
     &__title {
@@ -81,8 +86,7 @@
     }
 
     &__list-subtitles {
-      display: flex;
-      flex-direction: row;
+      display: none;
 
       div {
         font-size: 80%;
@@ -102,7 +106,6 @@
 
     &__list-details-item {
       border-bottom: 1px solid #CCC;
-      display: flex;
       flex-direction: row;
       font-size: 80%;
       font-weight: 500;
@@ -112,7 +115,7 @@
       }
 
       div {
-        padding: 1rem .75rem;
+        padding: 1rem .75rem 0;
       }
 
       &.even {
@@ -123,7 +126,6 @@
     &__list-details-title {
       color: rgba(59,130,246);
       max-width: 640px;
-      width: 70%;
     }
 
     &__list-details-release,
@@ -134,5 +136,70 @@
       padding: 0 .75rem;
       width: 15%;
     }
+
+    &__list-details-release {
+      padding: .75rem !important;
+    }
+
+    &__list-details-duration {
+      display: none;
+    }
   }
 }
+
+/* Responsive Styles */
+
+@media (min-width: $breakpoint-md) {
+
+  .podcast-detail {
+
+    &-main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &-content {
+      border-radius: 0;
+      margin-top: 0;
+
+      &__list-subtitles {
+        display: flex;
+        flex-direction: row;
+      }
+
+      &__list-details-item {
+        display: flex;
+
+        div {
+          padding: 1rem .75rem;
+        }
+      }
+
+      &__list-details-title {
+        width: 70%;
+      }
+
+      &__list-details-release {
+        padding: 1rem .75rem !important;
+      }
+
+      &__list-details-duration {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
+
+  .podcast-detail-aside {
+    flex: 0 0 35%;
+  }
+
+  .podcast-detail-main .podcasts-main {
+    flex: 0 0 60%;
+  }
+}
+
+
