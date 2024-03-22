@@ -12,7 +12,13 @@ export default async function episodeIdPage ({ params: { podcastId, episodeId } 
   try {
     const podcastDetails = await getPodcastDetail(podcastId)
 
-    const episodesValues = podcastDetails.find(detail => detail.id === episodeId)
+    const episodes = Object.fromEntries(
+      Object.entries(podcastDetails).filter(([_, value]) => {
+        return value.id === episodeId
+      }
+      ))
+
+    const episodesValues = Object.values(episodes)[0]
 
     if (!episodesValues) {
       throw new Error('Episode not found')

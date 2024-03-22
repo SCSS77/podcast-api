@@ -4,7 +4,7 @@ import usePodcast from '@/hooks/usePodcast'
 import { ChangeEvent, useMemo, useState } from 'react'
 import PodcastList from '@/components/PodcastList'
 
-function HomeContent () {
+export default function HomeContent () {
   const { podcastEntries } = usePodcast()
   const [filterPodcast, setFilterPodcast] = useState<string | null>(null)
   const filterPodcastSearch = useMemo(() => {
@@ -39,8 +39,4 @@ function HomeContent () {
       </section>
     </>
   )
-}
-
-export default function Home () {
-  return <HomeContent podcastEntries={[]} />
 }

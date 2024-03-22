@@ -10,15 +10,22 @@ interface Props {
 }
 
 export default async function podcastDetailsLayout ({ children, params: { podcastId } }: Props) {
-  const [podcastDetail, podcast] = await Promise.all([
-    getPodcastDetail(podcastId),
-    getPodcastList()
-  ])
+  const podcastDetail = await getPodcastDetail(podcastId)
+  const podcast = await getPodcastList()
 
-  const filteredData = podcastDetail.filter(({ type }) => type === 'track')
-  const podcastDescription = podcast.find(({ id }) => id === podcastId)
+  // get content of the podcast
+  const filteredData = Object.fromEntries(
+    Object.entries(podcastDetail).filter(([_, value]) => value.type === 'track')
+  )
 
-  const description = podcastDescription ? podcastDescription.description : 'No description available'
+  // get content description
+  const podcastDescription = Object.fromEntries(
+    Object.entries(podcast).filter(([_, value]) => value.id === podcastId
+    )
+  )
+
+  // get description or show error message
+  const description = (Object.keys(podcastDescription).length > 0) ? Object.values(podcastDescription)[0].description : 'No description available'
 
   return (
     <>
