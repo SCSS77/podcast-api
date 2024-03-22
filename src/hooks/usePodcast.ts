@@ -11,12 +11,14 @@ export default function usePodcast () {
 
   const fetchData = useCallback(async () => {
     try {
+      // Attempt to retrieve podcast entries from local storage
       const cookieValue = getLocalStorageWithExpiry('myPodcasts')
       if (cookieValue) {
         const parsedValue = cookieValue !== null && JSON.parse(cookieValue)
         setPodcastEntries(JSON.parse(parsedValue.value))
         setLoading(false)
       } else {
+        // If no entries found in local storage, fetch data from API
         const data: PodcastProps[] = await getPodcastList()
         setPodcastEntries(data)
         setLocalStorageWithExpiry('myPodcasts', JSON.stringify(data), 1)

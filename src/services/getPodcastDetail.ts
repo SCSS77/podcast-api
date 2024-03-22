@@ -1,5 +1,7 @@
 import { PodcastDetail, PodcastEpisodeDetail } from '@/podcasts.d'
 
+// Connect to iTunes to get the details of a podcast and export it, if something fails, show error messages
+
 export default async function getPodcastDetail (podcastId: string): Promise<PodcastDetail[] | Error> {
   const params = new URLSearchParams({
     id: podcastId,

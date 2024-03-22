@@ -1,4 +1,5 @@
 export function getDurationFormat (duration: string) {
+  // if duration is undefined show message
   if (duration === undefined) return 'No available'
   let seconds = Math.floor(Number(duration) / 1000)
   const hours = Math.floor(seconds / 3600)

@@ -1,5 +1,7 @@
 import { Podcast } from '@/podcasts'
 
+// Connect to iTunes to get the list of podcasts and export it, if something fails, show error messages
+
 export default async function getPodcastList () {
   try {
     const res = await fetch('https://itunes.apple.com/us/rss/toppodcasts/limit=100/genre=1310/json')

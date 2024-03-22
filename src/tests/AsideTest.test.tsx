@@ -8,6 +8,7 @@ const mockData = { id: '1', title: 'Test Podcast', author: 'Test Author', image:
 describe('PodcastList Component', () => {
   let linkElement, img, title
 
+  // This run before all the tests start
   beforeAll(() => {
     render(<PodcastList items={mockData} />)
     linkElement = screen.getByRole('link', { name: /Test Podcast/i })
@@ -15,12 +16,14 @@ describe('PodcastList Component', () => {
     title = screen.getByRole('heading', { name: /test podcast/i })
   })
 
+  // Tests that the component renders with valid props
   it('renders with valid props', () => {
     expect(linkElement).toBeDefined()
     expect(img).toBeDefined()
     expect(title).toBeDefined()
   })
 
+  // Tests that redirects to the correct url
   it('redirects to correct url', () => {
     const hrefValue = linkElement.getAttribute('href')
     expect(hrefValue).toBe('/podcast/1')

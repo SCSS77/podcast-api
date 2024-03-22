@@ -17,6 +17,7 @@ export function getLocalStorageWithExpiry (key: string): string | null {
   const now = new Date().getTime()
 
   if (now > parsedItem.expiry) {
+    // If the item is expired, remove it from localStorage
     localStorage.removeItem(key)
     return null
   }

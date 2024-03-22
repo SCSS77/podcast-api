@@ -1,4 +1,5 @@
 export function getDateFormatter (dateInput: string | undefined) {
+  // if dateInput is undefined show message
   if (dateInput === undefined) return 'No Date available'
 
   const formatDate = new Date(dateInput)
