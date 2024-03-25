@@ -18,7 +18,8 @@ export default function PodcastDescriptionPage ({ params: { podcastId } }: Param
 
   if (!podcastDetail) return null
 
-  const featurePodcastSummary = podcastDetail.filter(detail => detail.type === 'track')
+  const dataArrayValues = podcastDetail && Object.values(podcastDetail)
+  const featurePodcastSummary = dataArrayValues && dataArrayValues.filter(detail => detail.type === 'track')
 
   const isValidURL = (text: string) => {
     const urlPattern = /http:|https:/i
@@ -45,7 +46,7 @@ export default function PodcastDescriptionPage ({ params: { podcastId } }: Param
               <div>Duration</div>
             </div>
             <ul className='podcast-detail-content__list-details'>
-              {podcastDetail.filter(item => item.type !== 'track').map((detail, index) => (
+              {dataArrayValues && dataArrayValues.filter(item => item.type !== 'track').map((detail, index) =>
                 <li key={index} className={`${index % 2 === 0 ? 'podcast-detail-content__list-details-item even' : 'podcast-detail-content__list-details-item odd'}`}>
                   <div className='podcast-detail-content__list-details-title'>
                     <Link href={customLink(detail.id)}>
@@ -59,7 +60,7 @@ export default function PodcastDescriptionPage ({ params: { podcastId } }: Param
                     {getDurationFormat(detail.duration)}
                   </div>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
         </div>
